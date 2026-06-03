@@ -1,0 +1,27 @@
+extends Node2D
+
+@onready var pausepanel: Panel = $Pausepanel
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	var esc_pressed = Input.is_action_just_pressed("pause")
+	if (esc_pressed == true):
+		get_tree().paused = true 
+		pausepanel.show()
+
+
+func _on_resume_pressed() -> void:
+	pausepanel.hide()
+	get_tree().paused = false
+	
+
+
+
+func _on_return_to_menu_pressed() -> void:
+	get_tree().paused = false
+	get_tree().change_scene_to_file("res://UI/main_menu.tscn")

@@ -1,0 +1,137 @@
+[gd_scene load_steps=5 format=3 uid="uid://dk6w60pwncg1d"]
+
+[sub_resource type="Animation" id="Animation_vp514"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.0313726, 0.0313726, 0.0313726, 0.0313726)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Exposition:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AreaTitle:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_aud3v"]
+resource_name = "fade_in"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.0313726, 0.0313726, 0.0313726, 0.0313726), Color(0.0313726, 0.0313726, 0.0313726, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_5ggkw"]
+resource_name = "fade_out"
+length = 13.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 2.96, 3.97, 4.96, 5.98, 6.97, 7.98, 9.03333, 10, 10.94, 12.049, 13.009),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(0.0313726, 0.0313726, 0.0313726, 1), Color(0.0235294, 0.0352941, 0.0235294, 1), Color(0.0235294, 0.0352941, 0.027451, 1), Color(0.0196078, 0.0352941, 0.0235294, 0.882353), Color(0.0196078, 0.0392157, 0.0235294, 0.784314), Color(0.0156863, 0.0392157, 0.0196078, 0.745098), Color(0.0117647, 0.0392157, 0.0156863, 0.705882), Color(0.0117647, 0.0392157, 0.0117647, 0.666667), Color(0.00784314, 0.0431373, 0.00784314, 0.509804), Color(0.00784314, 0.0431373, 0.00784314, 0.392157), Color(0.00392157, 0.0470588, 0.00392157, 0.27451), Color(0.00392157, 0.0470588, 0.00392157, 0.156863), Color(0.00392157, 0.0470588, 0.00392157, 0.0392157), Color(0.0313726, 0.0313726, 0.027451, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Exposition:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.02, 2, 3.01, 3.99, 4.99, 6, 6.98, 7.95, 8.99992, 10.0199, 10.9799, 12.0099, 12.9773),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0.0784314), Color(1, 1, 1, 0.235294), Color(1, 1, 1, 0.392157), Color(1, 1, 1, 0.588235), Color(1, 1, 1, 0.854902), Color(1, 1, 1, 1), Color(1, 1, 1, 0.984314), Color(1, 1, 1, 1), Color(1, 1, 1, 0.509804), Color(1, 1, 1, 0.27451), Color(1, 1, 1, 0.137255), Color(1, 1, 1, 0.0392157), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AreaTitle:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.99, 1.97, 3.01, 3.98, 5, 6, 7, 8, 9, 10.01, 11.04, 12.0071, 13),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 0.392157), Color(1, 1, 1, 0.784314), Color(1, 1, 1, 0.392157), Color(1, 1, 1, 0.196078), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5j0pd"]
+_data = {
+&"RESET": SubResource("Animation_vp514"),
+&"fade_in": SubResource("Animation_aud3v"),
+&"fade_out": SubResource("Animation_5ggkw")
+}
+
+[node name="Fade_transition" type="ColorRect"]
+z_index = 2
+offset_right = 1588.0
+offset_bottom = 1054.0
+color = Color(0.0313726, 0.0313726, 0.0313726, 0.0313726)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_5j0pd")
+}
+
+[node name="Exposition" type="Label" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 178.0
+offset_top = 193.0
+offset_right = 851.0
+offset_bottom = 473.0
+theme_override_font_sizes/font_size = 13
+text = "Allostasis: the process by which the body responds to stressors in order to regain homeostasis.
+Homeostasis: the ability of a living organism to maintain a stable, balanced internal environment (like temperature, water, or blood sugar) 
+despite changes in external conditions
+
+You are Leuko a Leukocyte it is your mission is to help this body fight infection and disease."
+
+[node name="AreaTitle" type="Label" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 782.0
+offset_top = 232.0
+offset_right = 1080.0
+offset_bottom = 369.0
+theme_override_font_sizes/font_size = 46
+text = "Mucus Pits"

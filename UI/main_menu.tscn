@@ -1,0 +1,72 @@
+[gd_scene load_steps=11 format=3 uid="uid://cpb0tk46mftx0"]
+
+[ext_resource type="Script" uid="uid://buhsb2nkigsw3" path="res://UI/main_menu.gd" id="1_p8ccj"]
+[ext_resource type="Texture2D" uid="uid://ta3jmen0io4v" path="res://ART assets/UI_assets/Startgame.png" id="2_ev3b6"]
+[ext_resource type="Texture2D" uid="uid://0to01c71i367" path="res://ART assets/UI_assets/Startgamehover.png" id="3_k0a0m"]
+[ext_resource type="Texture2D" uid="uid://c3ujhrojmsqi0" path="res://ART assets/UI_assets/Controlgame.png" id="4_2mudq"]
+[ext_resource type="Texture2D" uid="uid://w3qoh0y457dt" path="res://ART assets/UI_assets/Controlhover.png" id="5_cafmx"]
+[ext_resource type="Texture2D" uid="uid://c88bi815nj3qy" path="res://ART assets/UI_assets/Exitgame.png" id="6_tcix6"]
+[ext_resource type="Texture2D" uid="uid://clwxm1yomp7ur" path="res://ART assets/UI_assets/Exitgamehover.png" id="7_mmlvu"]
+[ext_resource type="Texture2D" uid="uid://b7kmjr03qo5vo" path="res://ART assets/UI_assets/Anatomybackground.png" id="8_2mudq"]
+[ext_resource type="Texture2D" uid="uid://b4vb8pn4n5wjo" path="res://ART assets/UI_assets/Titlename.png" id="9_cafmx"]
+[ext_resource type="PackedScene" uid="uid://dk6w60pwncg1d" path="res://fade_transition.tscn" id="10_cafmx"]
+
+[node name="Main_Menu" type="Node2D"]
+script = ExtResource("1_p8ccj")
+
+[node name="Button_manager" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Start" type="TextureButton" parent="Button_manager"]
+layout_mode = 0
+offset_left = 408.0
+offset_top = 236.0
+offset_right = 787.0
+offset_bottom = 368.0
+texture_normal = ExtResource("2_ev3b6")
+texture_hover = ExtResource("3_k0a0m")
+
+[node name="Controls" type="TextureButton" parent="Button_manager"]
+layout_mode = 0
+offset_left = 429.0
+offset_top = 365.0
+offset_right = 732.0
+offset_bottom = 497.0
+texture_normal = ExtResource("4_2mudq")
+texture_hover = ExtResource("5_cafmx")
+
+[node name="Quit" type="TextureButton" parent="Button_manager"]
+layout_mode = 0
+offset_left = 417.0
+offset_top = 495.0
+offset_right = 753.0
+offset_bottom = 627.0
+texture_normal = ExtResource("6_tcix6")
+texture_hover = ExtResource("7_mmlvu")
+
+[node name="TitleBackground" type="TextureRect" parent="."]
+z_index = -5
+offset_right = 1149.0
+offset_bottom = 649.0
+mouse_filter = 2
+texture = ExtResource("8_2mudq")
+
+[node name="Titlename" type="TextureRect" parent="."]
+offset_left = 378.0
+offset_top = -32.0
+offset_right = 820.0
+offset_bottom = 151.0
+texture = ExtResource("9_cafmx")
+
+[node name="Fade_transition" parent="." instance=ExtResource("10_cafmx")]
+visible = false
+
+[node name="Fade_timer" type="Timer" parent="Fade_transition"]
+
+[connection signal="pressed" from="Button_manager/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Button_manager/Controls" to="." method="_on_controls_pressed"]
+[connection signal="pressed" from="Button_manager/Quit" to="." method="_on_quit_pressed"]
+[connection signal="timeout" from="Fade_transition/Fade_timer" to="." method="_on_fade_timer_timeout"]

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://5t2oqvbuqy3o"]
+
+[ext_resource type="Texture2D" uid="uid://cpjrly1smp1nq" path="res://ART assets/Weapon_assets/Enzyme_Launcher.png" id="1_yhb7p"]
+
+[node name="EnzymeLauncher" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_yhb7p")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]

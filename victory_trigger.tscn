@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://0mierobawgae"]
+
+[ext_resource type="Script" uid="uid://cv1bsa18ohw65" path="res://victory_trigger.gd" id="1_vcl8h"]
+[ext_resource type="Texture2D" uid="uid://bddiaxa3rtgfm" path="res://ART assets/VictoryScreen.png" id="2_a5p5j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6x14m"]
+size = Vector2(82, 73)
+
+[node name="VictoryTrigger" type="Area2D"]
+script = ExtResource("1_vcl8h")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_a5p5j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-6, -1.5)
+shape = SubResource("RectangleShape2D_6x14m")

@@ -1,0 +1,42 @@
+[gd_scene load_steps=4 format=3 uid="uid://4lj5ah2yt10o"]
+
+[ext_resource type="Script" uid="uid://8e8hgoj2aujm" path="res://Levels/Dialogue_box.gd" id="1_v506g"]
+[ext_resource type="FontFile" uid="uid://bb3cjaagy4w7j" path="res://Fonts/ARIALI.TTF" id="2_f3obc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f3obc"]
+bg_color = Color(1, 1, 1, 1)
+
+[node name="DialogueBox" type="Control"]
+visible = false
+z_index = 4
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 3
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("1_v506g")
+
+[node name="Panel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.00260417
+anchor_right = 1.0
+anchor_bottom = 1.075
+theme_override_styles/normal = SubResource("StyleBoxFlat_f3obc")
+metadata/_edit_use_anchors_ = true
+
+[node name="BodyText" type="RichTextLabel" parent="Panel"]
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(0, 0, 0, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/line_separation = 0
+theme_override_fonts/normal_font = ExtResource("2_f3obc")
+theme_override_font_sizes/normal_font_size = 18

@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://cet6t24dc1otn"]
+
+[ext_resource type="Script" uid="uid://ch0a3jpwa7ywf" path="res://Scenes/Enviroment/ciliaspike.gd" id="1_37b6y"]
+[ext_resource type="Texture2D" uid="uid://pspx2qjnpwf1" path="res://ART assets/Spike1.png" id="2_gvt65"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7y14r"]
+size = Vector2(29, 28)
+
+[node name="Ciliaspike" type="Area2D"]
+script = ExtResource("1_37b6y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+light_mask = 512
+visibility_layer = 32
+position = Vector2(0.5, 1)
+shape = SubResource("RectangleShape2D_7y14r")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_gvt65")

@@ -1,0 +1,93 @@
+[gd_scene load_steps=12 format=3 uid="uid://u8tu5sjhe8ay"]
+
+[ext_resource type="Script" uid="uid://v5h4rj4evl1v" path="res://dendril.gd" id="1_jko7x"]
+[ext_resource type="Texture2D" uid="uid://21dcf7gd2txy" path="res://ART assets/Cellnpc.png" id="2_v2xwg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vdlyb"]
+size = Vector2(35, 74)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1fy51"]
+atlas = ExtResource("2_v2xwg")
+region = Rect2(0, 0, 600, 600)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_et6xk"]
+atlas = ExtResource("2_v2xwg")
+region = Rect2(600, 0, 600, 600)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5jcvb"]
+atlas = ExtResource("2_v2xwg")
+region = Rect2(1200, 0, 600, 600)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5nthn"]
+atlas = ExtResource("2_v2xwg")
+region = Rect2(1800, 0, 600, 600)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jpfdq"]
+atlas = ExtResource("2_v2xwg")
+region = Rect2(2400, 0, 600, 600)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gcfiw"]
+atlas = ExtResource("2_v2xwg")
+region = Rect2(1800, 0, 600, 600)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bgnih"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1fy51")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_et6xk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5jcvb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5nthn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jpfdq")
+}],
+"loop": true,
+"name": &"Talking",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gcfiw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tuni5"]
+size = Vector2(36, 74)
+
+[node name="Dendril" type="CharacterBody2D"]
+script = ExtResource("1_jko7x")
+
+[node name="npcTalkzone" type="Area2D" parent="."]
+position = Vector2(1.5, 0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="npcTalkzone"]
+visibility_layer = 256
+position = Vector2(-1, -0.5)
+shape = SubResource("RectangleShape2D_vdlyb")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_bgnih")
+animation = &"Talking"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visibility_layer = 256
+position = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_tuni5")
+
+[node name="PromptLabel" type="Label" parent="."]
+visible = false
+offset_left = 17.0
+offset_top = -29.0
+offset_right = 57.0
+offset_bottom = -6.0
+text = "Press T to talk"

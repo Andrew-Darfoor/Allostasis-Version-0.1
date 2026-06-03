@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://be2jdtaqkl0yf"]
+
+[ext_resource type="Script" uid="uid://d1xjtqa6t0smk" path="res://Scenes/Weapons/complement_cleaver.gd" id="1_7igp6"]
+[ext_resource type="Texture2D" uid="uid://dlh588tk0jtnk" path="res://ART assets/Weapon_assets/Complement_Cleaver.png" id="1_ktfj7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ktfj7"]
+size = Vector2(21, 50)
+
+[node name="ComplementCleaver" type="Area2D"]
+script = ExtResource("1_7igp6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ktfj7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visibility_layer = 256
+position = Vector2(0.5, 3)
+shape = SubResource("RectangleShape2D_ktfj7")

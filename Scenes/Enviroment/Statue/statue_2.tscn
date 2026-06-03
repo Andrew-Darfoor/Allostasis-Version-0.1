@@ -1,0 +1,54 @@
+[gd_scene load_steps=2 format=3 uid="uid://ch2qplpy0ry3i"]
+
+[ext_resource type="Texture2D" uid="uid://dmuadoinhwiyo" path="res://ART assets/2d_metroidvania_serie_mockup_1_tileset.png" id="1_frpfb"]
+
+[node name="Statue_2" type="Node2D"]
+z_index = -1
+
+[node name="Head_1" type="Sprite2D" parent="."]
+position = Vector2(0, -74)
+texture = ExtResource("1_frpfb")
+region_enabled = true
+region_rect = Rect2(1945, 2012, 62, 73)
+metadata/_aseprite_wizard_interface_config_ = {
+"layer_section": false,
+"pending_changes": {
+"convert_fps_field": 60.0,
+"convert_ms_field": 16.0,
+"convert_to_fps": false,
+"embed_tex": true,
+"i_mode": 0,
+"keep_anim_length": false,
+"layers": [],
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"player": "",
+"scale": "1.0",
+"slice": "",
+"source": "",
+"source_uid": -1
+}
+}
+
+[node name="Head_2" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(-1, -125)
+texture = ExtResource("1_frpfb")
+region_enabled = true
+region_rect = Rect2(1826, 2011, 61, 54)
+
+[node name="Head_3" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(1, -153)
+texture = ExtResource("1_frpfb")
+region_enabled = true
+region_rect = Rect2(1736, 1986, 68, 46)
+
+[node name="Head_4" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(-1, -1)
+texture = ExtResource("1_frpfb")
+region_enabled = true
+region_rect = Rect2(1616, 1988, 71, 89)

@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://clecguy8u248y"]
+
+[ext_resource type="Script" uid="uid://dgpud61avwdox" path="res://Scenes/Weapons/ammopill.gd" id="1_bu5lj"]
+[ext_resource type="Texture2D" uid="uid://c2wh1mywwdck6" path="res://ART assets/Ammopill.png" id="2_xhuck"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gywd5"]
+size = Vector2(27, 20)
+
+[node name="Ammopill" type="Area2D"]
+script = ExtResource("1_bu5lj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visibility_layer = 256
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_gywd5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_xhuck")

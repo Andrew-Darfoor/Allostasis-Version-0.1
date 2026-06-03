@@ -1,0 +1,115 @@
+[gd_scene load_steps=15 format=3 uid="uid://chy8pl71afiu5"]
+
+[ext_resource type="Script" uid="uid://dh06kfeiit2mw" path="res://Scenes/Enviroment/ciliaspiketrap.gd" id="1_sly48"]
+[ext_resource type="Texture2D" uid="uid://c7axt2ttko01" path="res://ART assets/Spiketrap.png" id="2_oflwd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5wdt7"]
+size = Vector2(25, 29)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6tpgw"]
+atlas = ExtResource("2_oflwd")
+region = Rect2(1200, 0, 400, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_18yj2"]
+atlas = ExtResource("2_oflwd")
+region = Rect2(800, 0, 400, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2f0hy"]
+atlas = ExtResource("2_oflwd")
+region = Rect2(400, 0, 400, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yg63c"]
+atlas = ExtResource("2_oflwd")
+region = Rect2(0, 0, 400, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tv15u"]
+atlas = ExtResource("2_oflwd")
+region = Rect2(0, 0, 400, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kedqw"]
+atlas = ExtResource("2_oflwd")
+region = Rect2(1200, 0, 400, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t1sbo"]
+atlas = ExtResource("2_oflwd")
+region = Rect2(0, 0, 400, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hxwat"]
+atlas = ExtResource("2_oflwd")
+region = Rect2(400, 0, 400, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kvci0"]
+atlas = ExtResource("2_oflwd")
+region = Rect2(800, 0, 400, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dbixr"]
+atlas = ExtResource("2_oflwd")
+region = Rect2(1200, 0, 400, 400)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_avsvf"]
+animations = [{
+"frames": [{
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_6tpgw")
+}, {
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_18yj2")
+}, {
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_2f0hy")
+}, {
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_yg63c")
+}],
+"loop": false,
+"name": &"spikedown",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tv15u")
+}],
+"loop": false,
+"name": &"spikeidle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kedqw")
+}],
+"loop": false,
+"name": &"spikeset",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_t1sbo")
+}, {
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_hxwat")
+}, {
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_kvci0")
+}, {
+"duration": 0.5,
+"texture": SubResource("AtlasTexture_dbixr")
+}],
+"loop": false,
+"name": &"spikeup",
+"speed": 5.0
+}]
+
+[node name="Ciliaspiketrap" type="Area2D"]
+monitoring = false
+script = ExtResource("1_sly48")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+light_mask = 512
+visibility_layer = 32
+position = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_5wdt7")
+disabled = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_avsvf")
+animation = &"spikeidle"

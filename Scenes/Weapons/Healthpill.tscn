@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://gk16fgf7gnxd"]
+
+[ext_resource type="Script" uid="uid://cepgp0fylyk3j" path="res://Scenes/Weapons/Healthpill.gd" id="1_vbyyj"]
+[ext_resource type="Texture2D" uid="uid://boqr4x7w4flf2" path="res://ART assets/Healthpill.png" id="2_qtsar"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_531gb"]
+size = Vector2(30, 20)
+
+[node name="Healthpill" type="Area2D"]
+script = ExtResource("1_vbyyj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visibility_layer = 256
+shape = SubResource("RectangleShape2D_531gb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_qtsar")

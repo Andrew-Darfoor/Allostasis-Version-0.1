@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dbwlib0m3hy8c"]
+
+[ext_resource type="Texture2D" uid="uid://cpjrly1smp1nq" path="res://ART assets/Weapon_assets/Enzyme_Launcher.png" id="1_8e2ef"]
+[ext_resource type="Script" uid="uid://dooj5nc278wt4" path="res://Scenes/Weapons/enzyme_launcher.gd" id="1_sebmw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8e2ef"]
+size = Vector2(60, 24)
+
+[node name="EnzymeLauncher" type="Area2D"]
+script = ExtResource("1_sebmw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_8e2ef")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visibility_layer = 256
+position = Vector2(0, -2)
+shape = SubResource("RectangleShape2D_8e2ef")

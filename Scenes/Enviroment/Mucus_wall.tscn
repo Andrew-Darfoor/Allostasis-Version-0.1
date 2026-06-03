@@ -1,0 +1,105 @@
+[gd_scene load_steps=15 format=3 uid="uid://bnlysoou7ced6"]
+
+[ext_resource type="Script" uid="uid://ew17qm8w7tmd" path="res://Scenes/Enviroment/Mucus_wall.gd" id="1_dmxus"]
+[ext_resource type="Texture2D" uid="uid://b4t2fqk5xl3nc" path="res://ART assets/Mucus_Wall.png" id="1_y1axl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dmxus"]
+atlas = ExtResource("1_y1axl")
+region = Rect2(0, 0, 300, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_06o34"]
+atlas = ExtResource("1_y1axl")
+region = Rect2(300, 0, 300, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oepkp"]
+atlas = ExtResource("1_y1axl")
+region = Rect2(600, 0, 300, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t52st"]
+atlas = ExtResource("1_y1axl")
+region = Rect2(900, 0, 300, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t863l"]
+atlas = ExtResource("1_y1axl")
+region = Rect2(1200, 0, 300, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_we0f8"]
+atlas = ExtResource("1_y1axl")
+region = Rect2(1500, 0, 300, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xfneq"]
+atlas = ExtResource("1_y1axl")
+region = Rect2(1800, 0, 300, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xff2r"]
+atlas = ExtResource("1_y1axl")
+region = Rect2(2100, 0, 300, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f2khi"]
+atlas = ExtResource("1_y1axl")
+region = Rect2(2400, 0, 300, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sg06v"]
+atlas = ExtResource("1_y1axl")
+region = Rect2(0, 0, 300, 300)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1sacp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dmxus")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_06o34")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oepkp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t52st")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t863l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_we0f8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xfneq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xff2r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f2khi")
+}],
+"loop": false,
+"name": &"walldestroyed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sg06v")
+}],
+"loop": true,
+"name": &"wallnormal",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gnbl8"]
+size = Vector2(116, 178)
+
+[node name="Mucus_wall" type="StaticBody2D"]
+collision_layer = 1024
+collision_mask = 65
+script = ExtResource("1_dmxus")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_1sacp")
+animation = &"wallnormal"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+light_mask = 65
+visibility_layer = 1024
+position = Vector2(-3, -5)
+shape = SubResource("RectangleShape2D_gnbl8")
